@@ -31,12 +31,19 @@ p {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
-/* TOP-MENU */
-.overlay-slider {
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    z-index: 888;
-    position: relative;
+/* -------------------------------------------------------------TOP-MENU */
 
+.carousel-item {
+    position: relative;
+}
+
+.overlay-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .logo-img img {
@@ -47,10 +54,6 @@ p {
     z-index: 999;
 }
 
-.carousel-item {
-    position: relative;
-}
-
 .logo-slider {
     position: absolute;
     z-index: 50;
@@ -59,12 +62,24 @@ p {
 }
 
 .carousel-caption {
-    text-align: center;
-    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .slider-title {
     color: #ffd400;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.slider-description,
+.slider-title,
+.btn-outline {
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .btn-outline {
@@ -83,7 +98,7 @@ p {
 
 
 
-/* HEADER-MENU */
+/* -----------------------------------------------------------HEADER-MENU */
 
 nav {
     background-color: #006400;
@@ -130,7 +145,7 @@ nav .container {
     color: black;
 }
 
-.sub-menu {
+.primary-menu>.has-children>.sub-menu {
     width: 180px;
     display: none;
     background-color: white;
@@ -422,6 +437,11 @@ nav .container {
 
 /* --------------------------------------------- FEEDBACKS-LOVER ------------------------ */
 
+.food-lover >.container{
+    margin: 100px 0;    
+}
+
+
 .food-lover-title {
     text-align: center;
     color: #005D00;
@@ -446,12 +466,12 @@ nav .container {
 }
 
 .lover-img {
-    text-align: center;
+    text-align: right;
 }
 
 .lover-img img {
     max-width: 100%;
-    width: 200px;
+    width: 210px;
     height: auto;
     border-radius: 10px;
 
@@ -532,11 +552,12 @@ nav .container {
 }
 
 .form-contact>textarea {
-    height: 172px;
+    height: 130px;
 }
 
 .form-contact button {
-    font-size: 15px;
+    font-size: 13px;
+    /* font-weight: 800; */
     border: 1px solid transparent;
     border-radius: 15px;
     width: 120px;
@@ -547,14 +568,14 @@ nav .container {
 
 
 
-/* BOTTOM - FOOTER */
+/* -----------------------------------------BOTTOM - FOOTER */
 
 .reservation-phone {
     text-align: center;
     padding: 20px 10px;
     color: #005E00;
     background-color: #FFD700;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 800;
 }
 
@@ -636,6 +657,8 @@ nav .container {
 }
 
 @media (max-width: 767.98px) {
+
+
     nav .overlay-menu {
         box-shadow: 230px 0 0 1000px rgba(0, 0, 0, 0.8);
     }
