@@ -9,11 +9,6 @@
     font-weight: 900;
 }
 
-/* main {
-    padding-left: 20px;
-    padding-right: 20px;
-} */
-
 body {
     font-family: Nunito, 'OpenSans', sans-serif;
     background-color: #ffd400;
@@ -37,30 +32,56 @@ p {
 }
 
 /* TOP-MENU */
+.overlay-slider {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    z-index: 888;
+    position: relative;
+
+}
 
 .logo-img img {
     position: absolute;
+}
+
+.slider-img img {
+    z-index: 999;
 }
 
 .carousel-item {
     position: relative;
 }
 
-.overlay {
-    background-color: rgba(0, 0, 0, 1);
-}
-
-.carousel-inner img {
-    background-color: rgba(0, 0, 0, 0.8);
+.logo-slider {
+    position: absolute;
+    z-index: 50;
+    top: 35px;
+    left: 350px;
 }
 
 .carousel-caption {
     text-align: center;
+    z-index: 999;
 }
 
 .slider-title {
     color: #ffd400;
 }
+
+.btn-outline {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ffd400;
+    border-radius: 15px;
+    color: #FFD400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+
+
 
 /* HEADER-MENU */
 
@@ -514,20 +535,15 @@ nav .container {
     height: 172px;
 }
 
-.form-contact>button {
+.form-contact button {
     font-size: 15px;
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 15px;
     width: 120px;
     height: 35px;
     background-color: #005D00;
     color: #FFD400;
 }
-
-
-
-
-
 
 
 
@@ -620,12 +636,13 @@ nav .container {
 }
 
 @media (max-width: 767.98px) {
-    .overlay-menu {
-        background-color: rgba(0, 0, 0, 0.92);
+    nav .overlay-menu {
+        box-shadow: 230px 0 0 1000px rgba(0, 0, 0, 0.8);
     }
 
     nav {
-        /* display: none; */
+        display: none;
+        z-index: 999;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -656,6 +673,13 @@ nav .container {
 
     .sub-menu {
         position: relative;
+        display: none;
+        background-color: black;
+
+    }
+
+    .carousel-indicators {
+        display: none;
     }
 
     .has-children>a::after {
